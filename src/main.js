@@ -26,9 +26,9 @@ export default class App {
 
 let app = new App();
 console.log("Funcion sumatoria de la serie uno: ");
-console.log(app.sumatoriaSerieUno(7));
+console.log(app.sumatoriaSerieUno(5));
+console.log(app.sumatoriaSerieUno(10));
 console.log(app.sumatoriaSerieUno(15));
-console.log(app.sumatoriaSerieUno(21));
 console.log("");
 console.log("Funcion sumatoria de la serie dos: ");
 console.log(app.sumatoriaSerieDos(7));
