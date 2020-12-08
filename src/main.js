@@ -1,4 +1,5 @@
 export default class App {
+
     sumatoriaSerieUno(numero) {
     let suma = 1;
     for (let i = 2; i <= numero; i++) {
@@ -20,7 +21,7 @@ export default class App {
     }
     
     esPrimo(numero){
-    let i, flag;
+    let i;
     if(numero == 0 | numero == 1 | numero == 4){
         return false;
     }
@@ -32,31 +33,24 @@ export default class App {
     }
     return true;
     }
-    obtenerMultiplos(inicio, fin){
-        let t,suma,i;
-        if(inicio > fin){
-            t = inicio;
-            inicio = fin;
-            fin = t;
+    obtenerMultiplo(inicio, fin){
+        let i=0;
+        for(i=inicio; i<=fin; i++){
+            if(i % 3 == 0){
+                console.log(i);
+            }
         }
-        i = inicio;
-        do{
-        if(i % 3 == 0){
-            suma += i.toString();
-        }
-        i++;
-
-        }while(i <= fin);
-        }
+    }
 }
 
 let app = new App();
-console.log("Funcion sumatoria de la serie uno: ");
+
+console.log("Funcion sumatoria de la serie uno:");
 console.log(app.sumatoriaSerieUno(5));
 console.log(app.sumatoriaSerieUno(10));
 console.log(app.sumatoriaSerieUno(15));
 console.log("");
-console.log("Funcion sumatoria de la serie dos: ");
+console.log("Funcion sumatoria de la serie dos:");
 console.log(app.sumatoriaSerieDos(5));
 console.log(app.sumatoriaSerieDos(10));
 console.log(app.sumatoriaSerieDos(15));
@@ -65,5 +59,5 @@ console.log("Funcion si un numero es primo o no:");
 console.log(app.esPrimo(0));
 console.log(app.esPrimo(7));
 console.log("");
-console.log("Funcion multiplos de un rango convertidos a string: ");
-console.log(app.obtenerMultiplos(12,10));
+console.log("Funcion multiplos de un rango convertidos a string:");
+console.log(app.obtenerMultiplo(1,12));
