@@ -1,5 +1,4 @@
 export default class App {
-
     sumatoriaSerieUno(numero) {
     let suma = 1;
     for (let i = 2; i <= numero; i++) {
@@ -34,12 +33,20 @@ export default class App {
     return true;
     }
     obtenerMultiplo(inicio, fin){
-        let i=0;
-        for(i=inicio; i<=fin; i++){
-            if(i % 3 == 0){
-                console.log(i);
-            }
+        if(inicio > fin){
+            let t = inicio;
+            inicio = fin;
+            fin = t;
         }
+        let i = inicio;
+        let string = "";
+        do {
+            if(i % 3 == 0)
+                string += i.toString();
+
+            i++;
+        }while(i<=fin);
+        return string;
     }
 }
 
@@ -60,4 +67,4 @@ console.log(app.esPrimo(0));
 console.log(app.esPrimo(7));
 console.log("");
 console.log("Funcion multiplos de un rango convertidos a string:");
-console.log(app.obtenerMultiplo(1,12));
+console.log(app.obtenerMultiplo(12,1));
