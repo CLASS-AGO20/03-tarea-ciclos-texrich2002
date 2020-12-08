@@ -32,6 +32,7 @@ export default class App {
     }
     return true;
     }
+
     obtenerMultiplo(inicio, fin){
         if(inicio > fin){
             let t = inicio;
@@ -47,6 +48,20 @@ export default class App {
             i++;
         }while(i<=fin);
         return string;
+    }
+    obtenerImpares(n1, n2){
+    let string = "";
+    if(n1 < n2) {
+        let aux = n1;
+        n1 = n2;
+        n2 = aux;
+    }
+    for(let i = n1; i>= n2; i--){
+        if(i % 2 != 0)
+            string += i + ',';
+    }
+
+    return string;
     }
 }
 
@@ -68,3 +83,6 @@ console.log(app.esPrimo(7));
 console.log("");
 console.log("Funcion multiplos de un rango convertidos a string:");
 console.log(app.obtenerMultiplo(12,1));
+console.log("");
+console.log("Funcion numeros impares dentro de un rango convertidos a string:");
+console.log(app.obtenerImpares(12,1));
