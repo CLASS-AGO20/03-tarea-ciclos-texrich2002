@@ -33,7 +33,7 @@ export default class App {
     return true;
     }
 
-    obtenerMultiplo(inicio, fin){
+    obtenerMultiplos(inicio, fin){
         if(inicio > fin){
             let t = inicio;
             inicio = fin;
@@ -57,14 +57,12 @@ export default class App {
         n2 = aux;
     }
     for(let i = n1; i>= n2; i--){
-        if(i % 2 !== 0){
-            string += i;
-            if(i > n2){
-                string += ',';
-            }
-        }  
+        if(i % 2 != 0){
+            string += i + ',';
+        }    
     }
-
+    string = string.substring(0, string.length - 1); //para remover el ultimo caracter
+  
     return string;
     }
 }
@@ -86,7 +84,7 @@ console.log(app.esPrimo(0));
 console.log(app.esPrimo(7));
 console.log("");
 console.log("Funcion multiplos de un rango convertidos a string:");
-console.log(app.obtenerMultiplo(20,35));
+console.log(app.obtenerMultiplos(20,35));
 console.log("");
 console.log("Funcion numeros impares dentro de un rango convertidos a string:");
-console.log(app.obtenerImpares(2,10));
+console.log(app.obtenerImpares(11,1));
