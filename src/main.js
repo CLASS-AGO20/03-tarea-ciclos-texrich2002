@@ -57,8 +57,14 @@ export default class App {
         n2 = aux;
     }
     for(let i = n1; i>= n2; i--){
-        if(i % 2 != 0)
-            string += i + ',';
+        if(i % 2 != 0){
+            string += i;
+            if(i != n2){
+                string += ',';
+            }
+        }
+
+            
     }
 
     return string;
@@ -82,7 +88,7 @@ console.log(app.esPrimo(0));
 console.log(app.esPrimo(7));
 console.log("");
 console.log("Funcion multiplos de un rango convertidos a string:");
-console.log(app.obtenerMultiplo(12,1));
+console.log(app.obtenerMultiplo(20,35));
 console.log("");
 console.log("Funcion numeros impares dentro de un rango convertidos a string:");
 console.log(app.obtenerImpares(12,1));
